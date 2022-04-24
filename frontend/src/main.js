@@ -8,7 +8,6 @@ import router from './router';
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = process.env.VUE_APP_AXIOS_DEFAULT_BASE_URL;
-// axios.defaults.baseURL = "http://localhost:5000/"
 
 Vue.config.productionTip = false;
 
