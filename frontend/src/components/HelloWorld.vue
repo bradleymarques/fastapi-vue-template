@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ msg }}</p>
+    <h4>{{ msg }}</h4>
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
       axios
         .get("/")
         .then((res) => {
-          this.msg = res.data;
+          this.msg = res.data.message;
         })
         .catch((error) => {
           console.error(error);

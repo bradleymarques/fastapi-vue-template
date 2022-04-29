@@ -1,4 +1,6 @@
 import os
+import datetime
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.database.register import register_tortoise
@@ -19,4 +21,4 @@ register_tortoise(app, config=TORTOISE_ORM, generate_schemas=False)
 
 @app.get("/")
 def home():
-    return "Hello, World!"
+    return {"message": f"Hello, the time is {datetime.datetime.now()}"}
